@@ -1,0 +1,15 @@
+{
+    "name": "Popup",
+    "alias": "popup",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 100,
+    "providers": [
+        "Modules\\Popup\\Providers\\PopupServiceProvider",
+        "Modules\\Popup\\Providers\\RouteServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

@@ -1,0 +1,28 @@
+{
+    "name": "sagsoz06/popup-module",
+    "description": "",
+    "type": "asgard-module",
+    "license": "MIT", 
+    "require": {
+        "php": ">=5.6",
+        "composer/installers": "~1.0",
+        "embed/embed": "^3.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.0",
+        "orchestra/testbench": "~3.2"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\Popup\\": ".",
+            "Modules\\": "Modules/"
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "Modules\\Popup\\": ""
+        }
+    }
+}
