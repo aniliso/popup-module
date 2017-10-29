@@ -8,6 +8,15 @@ class PopupPresenter extends BasePresenter
 {
     protected $zone = 'popupImage';
 
+    public function link($field="")
+    {
+        $locale = locale() == null ? config('app.fallback_locale') : locale();
+        if(isset($this->entity->settings->{$field}->{$locale}) === true) {
+           return $this->entity->settings->{$field}->{$locale};
+        }
+        return null;
+    }
+
     public function content()
     {
         switch ($this->entity->design_type) {
@@ -18,7 +27,8 @@ class PopupPresenter extends BasePresenter
                 return $this->entity->design_desc;
                 break;
             case 'image':
-                return \Html::image($this->firstImage($this->entity->settings->image_width, $this->entity->settings->image_height, 'fit', 80), $this->entity->title);
+                $image = \Html::image($this->firstImage($this->entity->settings->image_width, $this->entity->settings->image_height, 'fit', 80), $this->entity->title);
+                return $image;
                 break;
             case 'iframe':
                 $iframe = Utils::iframe($this->entity->design_desc, $this->entity->settings->width . 'px', $this->entity->settings->height . 'px', 'overflow:hidden;');

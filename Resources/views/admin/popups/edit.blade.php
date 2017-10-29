@@ -65,6 +65,15 @@
                             <input name="design_desc" type="hidden" value="" v-if="design_type == 'social'" />
                         </div>
 
+                        <div class="row">
+                            <div class="col-md-12">
+                                <fieldset>
+                                    <legend>Link</legend>
+                                    @include('popup::admin.popups.partials.url')
+                                </fieldset>
+                            </div>
+                        </div>
+
                     </div>
                     <div class="box-footer">
                         <button type="submit" class="btn btn-primary btn-flat">{{ trans('core::core.button.update') }}</button>

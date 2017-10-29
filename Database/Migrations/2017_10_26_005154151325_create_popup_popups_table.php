@@ -26,7 +26,7 @@ class CreatePopupPopupsTable extends Migration
             $table->time('start_hour')->default('00:00:00');
             $table->time('end_hour')->default('00:00:00');
 
-            $table->string('template');
+            $table->string('template')->nullable();
 
             $table->timestamps();
         });

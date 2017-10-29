@@ -58,7 +58,7 @@
                                 </a>
                             </td>
                             <td>
-                                {{ $popup->template }}
+                                {{ $popup->template ? $popup->template : 'Tüm alanlar' }}
                             </td>
                             <td>
                                 {{ $popup->start_at->format('d.m.Y').'/'.$popup->end_at->format('d.m.Y') }}

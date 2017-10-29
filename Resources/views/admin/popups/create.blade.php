@@ -63,6 +63,15 @@
                         </div>
                     </div>
 
+                    <div class="row">
+                        <div class="col-md-12">
+                            <fieldset>
+                                <legend>Link Ayarları</legend>
+                                @include('popup::admin.popups.partials.url')
+                            </fieldset>
+                        </div>
+                    </div>
+
                 </div>
                 <div class="box-footer">
                     <button type="submit" class="btn btn-primary btn-flat">{{ trans('core::core.button.create') }}</button>

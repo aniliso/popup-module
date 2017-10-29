@@ -92,6 +92,10 @@
                         {{ trans('popup::popups.form.settings.show_header') }}
                     </div>
                     <div class="form-group">
+                        {!! Form::checkbox("settings[show_footer]", 1, old('settings.show_footer', isset($popup->settings->show_footer) ? $popup->settings->show_footer : 0), ['class'=>'flat-blue']) !!}
+                        {{ trans('popup::popups.form.settings.show_footer') }}
+                    </div>
+                    <div class="form-group">
                         {!! Form::checkbox("settings[show_close]", 1, old('settings.show_close', isset($popup->settings->show_close) ? $popup->settings->show_close : 0), ['class'=>'flat-blue']) !!}
                         {{ trans('popup::popups.form.settings.show_close') }}
                     </div>
