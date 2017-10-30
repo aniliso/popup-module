@@ -6,5 +6,5 @@ use Modules\Core\Repositories\BaseRepository;
 
 interface PopupRepository extends BaseRepository
 {
-    public function getPopups($template);
+    public function getPopups($template=null);
 }

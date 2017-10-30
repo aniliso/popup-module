@@ -116,7 +116,7 @@
                     </div>
                     <div class="form-group">
                         <label for="settings[show_once]">
-                            {!! Form::checkbox("settings[show_once]", 1, old('settings.show_once', isset($popup->settings->show_once) ? $popup->settings->show_once : 1), ['class'=>'flat-blue']) !!}
+                            {!! Form::checkbox("settings[show_once]", 1, old('settings.show_once', isset($popup->settings->show_once) ? $popup->settings->show_once : 0), ['class'=>'flat-blue']) !!}
                             {{ trans('popup::popups.form.settings.show_once') }}
                         </label>
                     </div>

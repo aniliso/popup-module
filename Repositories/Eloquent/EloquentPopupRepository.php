@@ -35,7 +35,7 @@ class EloquentPopupRepository extends EloquentBaseRepository implements PopupRep
         return $model->delete();
     }
 
-    public function getPopups($template)
+    public function getPopups($template = null)
     {
         return $this->model->where('template', $template)->betweenDates()->betweenHours()->orderBy('start_at')->get();
     }
