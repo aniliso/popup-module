@@ -33,6 +33,11 @@ class PopupServiceProvider extends ServiceProvider
             $this->getSidebarClassForModule('Popup', RegisterPopupSidebar::class)
         );
 
+        $this->app->extend('asgard.ModulesList', function($app) {
+            array_push($app, 'popup');
+            return $app;
+        });
+
         view()->composer(['popup::admin.popups.create', 'popup::admin.popups.edit'], TemplateViewComposer::class);
     }
 
