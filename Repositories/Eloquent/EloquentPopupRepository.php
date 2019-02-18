@@ -2,8 +2,8 @@
 
 namespace Modules\Popup\Repositories\Eloquent;
 
-use Modules\Blog\Events\PostWasDeleted;
 use Modules\Popup\Events\PopupWasCreated;
+use Modules\Popup\Events\PopupWasDeleted;
 use Modules\Popup\Events\PopupWasUpdated;
 use Modules\Popup\Repositories\PopupRepository;
 use Modules\Core\Repositories\Eloquent\EloquentBaseRepository;
@@ -30,7 +30,7 @@ class EloquentPopupRepository extends EloquentBaseRepository implements PopupRep
 
     public function destroy($model)
     {
-        event(new PostWasDeleted($model->id, get_class($model)));
+        event(new PopupWasDeleted($model->id, get_class($model)));
 
         return $model->delete();
     }
