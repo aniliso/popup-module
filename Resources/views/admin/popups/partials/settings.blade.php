@@ -96,11 +96,11 @@
                         {{ trans('popup::popups.form.settings.show_footer') }}
                     </div>
                     <div class="form-group">
-                        {!! Form::checkbox("settings[show_close]", 1, old('settings.show_close', isset($popup->settings->show_close) ? $popup->settings->show_close : 0), ['class'=>'flat-blue']) !!}
+                        {!! Form::checkbox("settings[show_close]", 1, old('settings.show_close', isset($popup->settings->show_close) ? $popup->settings->show_close : 1), ['class'=>'flat-blue']) !!}
                         {{ trans('popup::popups.form.settings.show_close') }}
                     </div>
                     <div class="form-group">
-                        {!! Form::checkbox("settings[show_counter]", 1, old('settings.show_counter', isset($popup->settings->show_counter) ? $popup->settings->show_counter : 0), ['class'=>'flat-blue']) !!}
+                        {!! Form::checkbox("settings[show_counter]", 1, old('settings.show_counter', isset($popup->settings->show_counter) ? $popup->settings->show_counter : 1), ['class'=>'flat-blue']) !!}
                         {{ trans('popup::popups.form.settings.show_counter') }}
                     </div>
                 </fieldset>
@@ -121,7 +121,7 @@
                         </label>
                     </div>
                     <div class="form-group">
-                        {!! Form::checkbox("settings[auto_close]", 1, old('settings.auto_close', isset($popup->settings->auto_close) ? $popup->settings->auto_close : 0), ['class'=>'flat-blue']) !!}
+                        {!! Form::checkbox("settings[auto_close]", 1, old('settings.auto_close', isset($popup->settings->auto_close) ? $popup->settings->auto_close : 1), ['class'=>'flat-blue']) !!}
                         {{ trans('popup::popups.form.settings.auto_close') }}
                     </div>
                     <div class="form-group {{ $errors->has("settings.cookie_expire") ? ' has-error' : '' }}">
@@ -171,19 +171,19 @@
                     <legend>Uyum Ayarları</legend>
                     <div class="form-group pull-left">
                         <label for="settings[show_desktop]">
-                            {!! Form::checkbox("settings[show_desktop]", 1, old('settings.show_desktop', isset($popup->settings->show_desktop) ? $popup->settings->show_desktop : ''), ['class'=>'flat-blue']) !!}
+                            {!! Form::checkbox("settings[show_desktop]", 1, old('settings.show_desktop', isset($popup->settings->show_desktop) ? $popup->settings->show_desktop : 1), ['class'=>'flat-blue']) !!}
                             {{ trans('popup::popups.form.settings.show_desktop') }}
                         </label>
                     </div>
                     <div class="form-group pull-left" style="margin-left: 10px;">
                         <label for="settings[show_tablet]">
-                            {!! Form::checkbox("settings[show_tablet]", 1, old('settings.show_tablet', isset($popup->settings->show_tablet) ? $popup->settings->show_tablet : ''), ['class'=>'flat-blue']) !!}
+                            {!! Form::checkbox("settings[show_tablet]", 1, old('settings.show_tablet', isset($popup->settings->show_tablet) ? $popup->settings->show_tablet : 1), ['class'=>'flat-blue']) !!}
                             {{ trans('popup::popups.form.settings.show_tablet') }}
                         </label>
                     </div>
                     <div class="form-group pull-left" style="margin-left: 10px;">
                         <label for="settings[show_mobile]">
-                            {!! Form::checkbox("settings[show_mobile]", 1, old('settings.show_mobile', isset($popup->settings->show_mobile) ? $popup->settings->show_mobile : ''), ['class'=>'flat-blue']) !!}
+                            {!! Form::checkbox("settings[show_mobile]", 1, old('settings.show_mobile', isset($popup->settings->show_mobile) ? $popup->settings->show_mobile : 1), ['class'=>'flat-blue']) !!}
                             {{ trans('popup::popups.form.settings.show_mobile') }}
                         </label>
                     </div>
