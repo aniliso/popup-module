@@ -39,4 +39,13 @@ class EloquentPopupRepository extends EloquentBaseRepository implements PopupRep
     {
         return $this->model->where('template', $template)->betweenDates()->betweenHours()->orderBy('start_at')->get();
     }
+
+    /**
+     * @param null $template
+     * @return mixed
+     */
+    public function getPopup($template = null)
+    {
+        return $this->model->where('template', $template)->betweenDates()->betweenHours()->orderBy('start_at')->first();
+    }
 }

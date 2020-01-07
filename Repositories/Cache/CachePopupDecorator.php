@@ -24,4 +24,16 @@ class CachePopupDecorator extends BaseCacheDecorator implements PopupRepository
                 }
             );
     }
+
+
+    public function getPopup($template = null)
+    {
+        return $this->cache
+            ->tags([$this->entityName, 'global'])
+            ->remember("{$this->locale}.{$this->entityName}.getPopup.{$template}", $this->cacheTime,
+                function () use ($template) {
+                    return $this->repository->getPopup($template);
+                }
+            );
+    }
 }

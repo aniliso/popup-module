@@ -28,6 +28,8 @@ class PopupServiceProvider extends ServiceProvider
     {
         $this->registerBindings();
 
+        \Widget::register('popup', '\Modules\Popup\Widgets\PopupWidget@popup');
+
         $this->app['events']->listen(
             BuildingSidebar::class,
             $this->getSidebarClassForModule('Popup', RegisterPopupSidebar::class)
