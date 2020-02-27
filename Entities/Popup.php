@@ -40,7 +40,7 @@ class Popup extends Model
 
     public function scopeBetweenDates($query)
     {
-        return $query->whereRaw('(NOW() BETWEEN start_at and end_at)');
+        return $query->whereRaw('(NOW() BETWEEN TIMESTAMP(start_at,start_hour) and TIMESTAMP(end_at,end_hour))');
     }
 
     public function scopeBetweenHours($query)
